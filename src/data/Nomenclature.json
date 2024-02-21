@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "url": "img/calendar.jpg",
+        "title": "Kalendarz",
+        "width": "100%",
+        "path": "calendar"
+    },
+    {
+        "id": 1,
+        "url": "img/binary.jpg",
+        "title": "Czasy",
+        "width": "100%",
+        "path": "time"
+    },
+    {
+        "id": 2,
+        "url": "img/business.jpg",
+        "title": "Logi",
+        "width": "100%",
+        "path": "log"
+    }
+]
