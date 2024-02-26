@@ -17,20 +17,17 @@ import { FormattedMessage } from "react-intl";
 import MuiAlert from "@mui/material/Alert";
 import Slide from "@mui/material/Slide";
 
-
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
-
-
 
 export default function Loginuser() {
   const [userStatus, setUserStatus] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [typedLogin, setTypedLogin] = useState("");
   const [addError, setAddError] = useState(false);
-  const [login, setLogin] = useState()
-  const [password, setPassword] = useState()
+  const [login, setLogin] = useState();
+  const [password, setPassword] = useState();
 
   const handleClickShowPassword = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
@@ -73,9 +70,9 @@ export default function Loginuser() {
           updateUserStatus(user.id, login, password, user.token, userStatus); // Aktualizacja statusu użytkownika
           goToUserInDatabase(); // Przekieruj do strony głównej
         } else {
-          setLogin("")
-          setTypedLogin("")
-          console.log("Użytkownik nie istnieje w bazie danych."); 
+          setLogin("");
+          setTypedLogin("");
+          console.log("Użytkownik nie istnieje w bazie danych.");
           setAddError(true);
           setTimeout(() => {
             setAddError(false);
@@ -90,7 +87,13 @@ export default function Loginuser() {
   };
 
   // Czy użytkownik zalogowany - zmiana statusu
-  const updateUserStatus = async (userId, login, password, token, userStatus) => {
+  const updateUserStatus = async (
+    userId,
+    login,
+    password,
+    token,
+    userStatus,
+  ) => {
     try {
       const res = await fetch(`http://localhost:5000/${userId}`, {
         method: "PUT",
@@ -191,12 +194,10 @@ export default function Loginuser() {
       <Stack spacing={2} sx={{ width: "100%" }}>
         <Snackbar open={addError} autoHideDuration={6000}>
           <Alert severity="error" sx={{ width: "100%" }}>
-              Wypełnij poprawnie formularz
+            Wypełnij poprawnie formularz
           </Alert>
         </Snackbar>
       </Stack>
-
     </div>
   );
 }
-

@@ -12,7 +12,7 @@ import Nomenclature from "../../data/Nomenclature.json";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import IconButton from "@mui/material/IconButton";
-import './Home.scss'
+import "./Home.scss";
 
 export default function Home() {
   // Stany
@@ -130,13 +130,12 @@ export default function Home() {
 
   return (
     <div className="home">
-       <div>
-         Wybierz moduł, 
-         <br />
-         który Cię interesuje
-         
-       </div>
-       
+      <div>
+        Wybierz moduł,
+        <br />
+        który Cię interesuje
+      </div>
+
       <div>
         <ThemeProvider theme={themeColor}>
           <Searchinput
