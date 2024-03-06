@@ -1,0 +1,35 @@
+
+table {
+    table-layout: fixed; 
+    width: 100%;
+    *margin-left: -100px;
+    overflow: scroll;
+  }
+  td, th {
+    vertical-align: top;
+    border-top: 1px solid #ccc;
+    padding:10px;
+    width:100px;
+  }
+  th {
+    width:100px;
+  }
+  .hard_left {
+    position:absolute;
+    *position: relative; 
+    left:0; 
+    width:100px;
+  }
+  .next_left {
+    position:absolute;
+    *position: relative; 
+    left:100px; 
+    width:100px;
+  }
+  .outer {position:relative}
+  .inner {
+    overflow-x:scroll;
+    overflow-y:visible;
+    width:400px; 
+    margin-left:200px;
+  }
