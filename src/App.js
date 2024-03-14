@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loginuser from "./components/loginuser/Loginuser";
 import Flag from "./components/Flag/Flag";
 import Log from "./components/log/Log";
+import Form from "./components/Form/Form";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/module" element={<Home />}></Route>
           <Route path="/flag" element={<Flag />}></Route>
           <Route path="/log" element={<Log />} />
+          <Route path="/form" element={<Form />}></Route>
         </Routes>
       </Router>
     </div>
